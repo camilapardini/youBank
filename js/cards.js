@@ -109,7 +109,7 @@ $(() => {
 <div class="imgCard">
   <div class="imgInterna">
     <div class="imgInternaContenedor">
-      <img src="../img/dumbell.png">
+      <img src="https://camilapardini.github.io/youBank/img/dumbell.png">
     </div>
   </div>
 </div>
@@ -133,7 +133,7 @@ $(() => {
 <div class="imgCard">
   <div class="imgInterna">
     <div class="imgInternaContenedor">
-      <img src="../img/cutlery.png">
+      <img src="https://camilapardini.github.io/youBank/img/cutlery.png">
     </div>
   </div>
 </div>
@@ -145,7 +145,7 @@ $(() => {
 <div class="imgCard">
   <div class="imgInterna">
     <div class="imgInternaContenedor">
-      <img src="../img/giftbox.png">
+      <img src="https://camilapardini.github.io/youBank/img/giftbox.png">
     </div>
   </div>
 </div>
@@ -225,7 +225,7 @@ $(() => {
     <div class="imgCard">
       <div class="imgInterna">
         <div class="imgInternaContenedor">
-          <img src="../img/hanger.png">
+          <img src="https://camilapardini.github.io/youBank/img/hanger.png">
         </div>
       </div>
     </div>
@@ -237,7 +237,7 @@ $(() => {
     <div class="imgCard">
       <div class="imgInterna">
         <div class="imgInternaContenedor">
-          <img src="../img/up.png">
+          <img src="https://camilapardini.github.io/youBank/img/up.png">
         </div>
       </div>
     </div>
@@ -249,7 +249,7 @@ $(() => {
     <div class="imgCard">
       <div class="imgInterna">
         <div class="imgInternaContenedor">
-          <img src="../img/scissors.png">
+          <img src="https://camilapardini.github.io/youBank/img/scissors.png">
         </div>
       </div>
     </div>
@@ -261,7 +261,7 @@ $(() => {
     <div class="imgCard">
       <div class="imgInterna">
         <div class="imgInternaContenedor">
-          <img src="../img/map.png">
+          <img src="https://camilapardini.github.io/youBank/img/map.png">
         </div>
       </div>
     </div>
@@ -329,7 +329,7 @@ $(() => {
     <div class="imgCard">
       <div class="imgInterna">
         <div class="imgInternaContenedor">
-          <img src="../img/cutlery.png">
+          <img src="https://camilapardini.github.io/youBank/img/cutlery.png">
         </div>
       </div>
     </div>
@@ -341,7 +341,7 @@ $(() => {
     <div class="imgCard">
       <div class="imgInterna">
         <div class="imgInternaContenedor">
-          <img src="../img/up.png">
+          <img src="https://camilapardini.github.io/youBank/img/up.png">
         </div>
       </div>
     </div>
@@ -353,7 +353,7 @@ $(() => {
     <div class="imgCard">
       <div class="imgInterna">
         <div class="imgInternaContenedor">
-          <img src="../img/responsive.png">
+          <img src="https://camilapardini.github.io/youBank/img/responsive.png">
         </div>
       </div>
     </div>
@@ -365,7 +365,7 @@ $(() => {
     <div class="imgCard">
       <div class="imgInterna">
         <div class="imgInternaContenedor">
-          <img src="../img/map.png">
+          <img src="https://camilapardini.github.io/youBank/img/map.png">
         </div>
       </div>
     </div>
@@ -434,7 +434,7 @@ $(() => {
     <div class="imgCard">
       <div class="imgInterna">
         <div class="imgInternaContenedor">
-          <img src="../img/hanger.png">
+          <img src="https://camilapardini.github.io/youBank/img/hanger.png">
         </div>
       </div>
     </div>
@@ -446,7 +446,7 @@ $(() => {
     <div class="imgCard">
       <div class="imgInterna">
         <div class="imgInternaContenedor">
-          <img src="../img/up.png">
+          <img src="https://camilapardini.github.io/youBank/img/up.png">
         </div>
       </div>
     </div>
@@ -458,7 +458,7 @@ $(() => {
     <div class="imgCard">
       <div class="imgInterna">
         <div class="imgInternaContenedor">
-          <img src="../img/scissors.png">
+          <img src="https://camilapardini.github.io/youBank/img/scissors.png">
         </div>
       </div>
     </div>
@@ -470,7 +470,7 @@ $(() => {
     <div class="imgCard">
       <div class="imgInterna">
         <div class="imgInternaContenedor">
-          <img src="../img/map.png">
+          <img src="https://camilapardini.github.io/youBank/img/map.png">
         </div>
       </div>
     </div>
@@ -539,7 +539,7 @@ $(() => {
     <div class="imgCard">
       <div class="imgInterna">
         <div class="imgInternaContenedor">
-          <img src="../img/shopping.png">
+          <img src="https://camilapardini.github.io/youBank/img/shopping.png">
         </div>
       </div>
     </div>
@@ -551,7 +551,7 @@ $(() => {
     <div class="imgCard">
       <div class="imgInterna">
         <div class="imgInternaContenedor">
-          <img src="../img/up.png">
+          <img src="https://camilapardini.github.io/youBank/img/up.png">
         </div>
       </div>
     </div>
@@ -563,7 +563,7 @@ $(() => {
     <div class="imgCard">
       <div class="imgInterna">
         <div class="imgInternaContenedor">
-          <img src="../img/delivery.png">
+          <img src="https://camilapardini.github.io/youBank/img/delivery.png">
         </div>
       </div>
     </div>
@@ -575,7 +575,7 @@ $(() => {
     <div class="imgCard">
       <div class="imgInterna">
         <div class="imgInternaContenedor">
-          <img src="../img/map.png">
+          <img src="https://camilapardini.github.io/youBank/img/map.png">
         </div>
       </div>
     </div>
@@ -644,7 +644,7 @@ $(() => {
                   <div class="imgCard">
                     <div class="imgInterna">
                       <div class="imgInternaContenedor">
-                        <img src="../img/shopping-bags.png">
+                        <img src="https://camilapardini.github.io/youBank/img/shopping-bags.png">
                       </div>
                     </div>
                   </div>
@@ -656,7 +656,7 @@ $(() => {
                   <div class="imgCard">
                     <div class="imgInterna">
                       <div class="imgInternaContenedor">
-                        <img src="../img/up.png">
+                        <img src="https://camilapardini.github.io/youBank/img/up.png">
                       </div>
                     </div>
                   </div>
@@ -668,7 +668,7 @@ $(() => {
                   <div class="imgCard">
                     <div class="imgInterna">
                       <div class="imgInternaContenedor">
-                        <img src="../img/vip-room.png">
+                        <img src="https://camilapardini.github.io/youBank/img/vip-room.png">
                       </div>
                     </div>
                   </div>
@@ -680,7 +680,7 @@ $(() => {
                   <div class="imgCard">
                     <div class="imgInterna">
                       <div class="imgInternaContenedor">
-                        <img src="../img/location.png">
+                        <img src="https://camilapardini.github.io/youBank/img/location.png">
                       </div>
                     </div>
                   </div>
