@@ -121,7 +121,7 @@ $(() => {
 <div class="imgCard">
   <div class="imgInterna">
     <div class="imgInternaContenedor">
-      <img src="../img/up.png">
+      <img src="https://camilapardini.github.io/youBank/img/up.png">
     </div>
   </div>
 </div>
@@ -656,7 +656,7 @@ $(() => {
                   <div class="imgCard">
                     <div class="imgInterna">
                       <div class="imgInternaContenedor">
-                        <img src="img/up.png">
+                        <img src="../img/up.png">
                       </div>
                     </div>
                   </div>
