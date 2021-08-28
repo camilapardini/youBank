@@ -1,0 +1,506 @@
+/* ------------- FORMULARIO SOLICITUD ------------- */
+
+#formularioSolicitud {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .fondo {
+    top: 90vw;
+    right: 70vw;
+    width: 940px;
+    height: 400px;
+    transform: rotate(-40deg);
+    z-index: -1;
+    bottom: 29vw;
+    opacity: 0.10;
+    background: $colorSecundario;
+    border-radius: 300px;
+    position: absolute;
+  }
+
+  h1 {
+    margin: 4rem;
+    font-family: $fuenteSubtitulos;
+    font-size: 4rem;
+    color: $colorTerciario;
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: $fuenteContenido;
+    color: $colorTerciario;
+
+    .nombreTitular {
+      font-size: 2rem;
+    }
+
+    #nombreUsuario {
+      width: 80%;
+      padding: 10px;
+      box-sizing: border-box;
+      background-color: none;
+      outline: none;
+      resize: none;
+      border: 0;
+      transition: all .3s;
+      border-bottom: 3px solid $colorTerciario;
+
+      &:focus {
+        border-bottom: 2px solid $colorSecundario;
+      }
+    }
+
+    .preguntasForm {
+      margin: 4rem;
+
+      label {
+        font-size: 2rem;
+        padding: 2rem;
+        font-weight: 400;
+      }
+
+
+
+    }
+
+    .botonSolicitar {
+      color: $colorTerciario;
+      text-decoration: none;
+      font-family: $fuenteSubtitulos;
+      font-size: 2rem;
+      font-weight: 500;
+      margin-top: 4rem;
+      background-color: #aed29b;
+      border-radius: 15px;
+      padding: 0.9rem;
+      border: none;
+      box-shadow: 3px 5px 6px rgba(0, 0, 0, .5);
+      z-index: 10;
+
+    }
+
+  }
+
+  #error {
+    font-family: $fuenteContenido;
+    margin-top: 5rem;
+    font-size: 2rem;
+  }
+
+}
+
+/*----- OPCIONES DESPLEGABLES FORM -------*/
+
+@keyframes textEnter {
+  from {
+    transform: translateX(100vw);
+    opacity: 0.1;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.rule {
+  margin: 10px 0;
+  border: none;
+  height: 1.5px;
+  background-image: linear-gradient(left, #f0f0f0, #c9bbae, #f0f0f0);
+}
+
+.sel {
+  font-size: 1rem;
+  display: inline-block;
+  margin: 1em 2em;
+  width: 270px;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  border-bottom: 3px solid #263150bd;
+
+  &::before {
+    position: absolute;
+    content: '\f078';
+    font-family: 'FontAwesome';
+    font-size: 2em;
+    color: $colorSecundario;
+    right: 20px;
+    top: calc(50% - 0.5em);
+  }
+}
+
+.sel.active {
+  &::before {
+    transform: rotateX(-180deg);
+  }
+
+  .sel__placeholder {
+    visibility: hidden;
+
+    &::before {
+      visibility: visible;
+    }
+  }
+
+  .sel__box {
+    display: block;
+    animation: fadeInUp 500ms;
+  }
+}
+
+.sel__placeholder {
+  display: block;
+  font-family: $fuenteContenido;
+  font-size: 2rem;
+  padding: 0.2em 0.5em;
+  text-align: left;
+  pointer-events: none;
+  user-select: none;
+  visibility: visible;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.2em 0.5em;
+    content: attr(data-placeholder);
+    visibility: hidden;
+  }
+}
+
+.sel__box {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: -4px;
+  display: none;
+  list-style-type: none;
+  text-align: left;
+  font-size: 1em;
+  background-color: #FFF;
+  width: calc(100% + 8px);
+  box-sizing: border-box;
+}
+
+.sel__box__options {
+  display: list-item;
+  font-family: $fuenteContenido;
+  font-size: 1.5em;
+  color: $colorTerciario;
+  padding: 0.5em 1em;
+  user-select: none;
+
+  &::after {
+    content: '\f121';
+    font-family: 'FontAwesome';
+    font-size: 0.5em;
+    margin-left: 5px;
+    display: none;
+  }
+
+  &:hover {
+    background-color: #ebedef;
+  }
+}
+
+.sel__box__options.selected {
+  &::after {
+    display: inline;
+  }
+}
+
+.sel--black-panther {
+  z-index: 3;
+}
+
+.sel--superman {
+  z-index: 2;
+}
+
+
+
+/* ------------- CONTENIDO CARDS ------------- */
+
+#contenidoPrincipal {
+  display: none;
+  height: auto;
+
+  .tituloTarjeta {
+    font-family: $fuenteSubtitulos;
+    font-size: 4rem;
+    color: $colorTerciario;
+    margin-bottom: 2rem;
+
+    .spanColors {
+      background-image: linear-gradient(to left, violet, rgb(121, 55, 169), rgb(110, 184, 95), rgb(45, 45, 154), rgb(233, 233, 88), rgb(238, 194, 111), rgb(237, 105, 105));
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .spanGreen {
+      color: rgb(67, 164, 67);
+    }
+    .spanGold {
+      color: rgb(196, 167, 2);
+    }
+    .spanPlatinum {
+      color: grey;
+    }
+    .spanBlack {
+      color: rgb(0, 0, 0);
+    }
+  }
+
+  .marcaTarjeta {
+    font-family: $fuenteSubtitulos;
+    font-size: 2.5rem;
+    color: $colorTerciario;
+    font-weight: 600;
+    margin-bottom: 5rem;
+  }
+}
+
+.infoTarjeta {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.cardColor {
+  width: 400px;
+  background-image: url(../img/youcolor.jpg);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5), -1px -1px 2px #aaa,
+    1px 1px 2px #555;
+  backdrop-filter: blur(0.8rem);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  animation: 2s cubic-bezier(0.16, 1, 0.3, 1) cardEnter;
+
+}
+
+.cardVerde {
+  width: 400px;
+  background-image: url(../img/green-background.jpeg);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5), -1px -1px 2px #aaa,
+    1px 1px 2px #555;
+  backdrop-filter: blur(0.8rem);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  animation: 2s cubic-bezier(0.16, 1, 0.3, 1) cardEnter;
+}
+
+.cardPlateada {
+  width: 400px;
+  background-image: url(../img/platinum-background.jpeg);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5), -1px -1px 2px #aaa,
+    1px 1px 2px #555;
+  backdrop-filter: blur(0.8rem);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  animation: 1s cubic-bezier(0.16, 1, 0.3, 1) cardEnter;
+}
+
+.cardDorada {
+  width: 400px;
+  background-image: url(../img/gold-background.jpeg);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5), -1px -1px 2px #aaa,
+    1px 1px 2px #555;
+  backdrop-filter: blur(0.8rem);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  animation: 1s cubic-bezier(0.16, 1, 0.3, 1) cardEnter;
+}
+
+.cardNegra {
+  width: 400px;
+  background-image: url(../img/black-background.jpg);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5), -1px -1px 2px #aaa,
+    1px 1px 2px #555;
+  backdrop-filter: blur(0.8rem);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  animation: 1s cubic-bezier(0.16, 1, 0.3, 1) cardEnter;
+}
+
+.card__row {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+
+.card__title {
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #19191a95;
+  margin: 1rem 0 1.5rem;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.66);
+}
+
+.card__col {
+  padding-right: 2rem;
+}
+
+.card__input {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.card__input--large {
+  font-size: 2rem;
+}
+
+.card__input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: none;
+}
+
+.card__input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.card__label {
+  display: block;
+  color: rgb(23, 21, 21);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  font-weight: 400;
+}
+
+.card__chip {
+  align-self: flex-end;
+}
+
+.card__chip img {
+  width: 5rem;
+}
+
+.card__brand img {
+  width: 5rem;
+  height: 5rem;
+}
+
+@keyframes cardEnter {
+  from {
+    transform: translateY(100vh);
+    opacity: 0.1;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+.caracteristicasTarjeta {
+  animation: 2s cubic-bezier(0.16, 1, 0.3, 1) textEnter;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+
+  .tituloUsarla {
+    font-family: $fuenteSubtitulos;
+    color: $colorTerciario;
+    font-size: 3.2rem;
+  }
+
+  
+/*
+  .pUsarla{
+    font-family: $fuenteContenido;
+    font-size: 1.6rem;
+    color: $colorTerciario
+  }*/
+
+  .contenedorCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 5rem;
+  
+  .cardBeneficios {
+    display: inline-block;
+    width: 190px;
+    text-align: center;
+    margin: 3rem;
+  }
+  
+  .imgCard {
+      height: 145px;
+      width: 190px;
+      overflow: hidden;
+      border-radius: 0px 0px 20px 20px;
+      
+  }
+  
+  .imgCard img {
+      height: 120px;
+      
+  }
+  
+  
+  .contenedorTexto{
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    padding: 95px 10px 0px 10px;
+    border-radius: 20px;
+    background: #fff;
+    margin: -120px 0px 0px 0px;
+    line-height: 19px;
+    font-size: 14px;
+    height: 180px;
+   
+    
+  }
+  
+  .contenedorTexto h3 {
+    margin: 20px 0px 10px 0px;
+    color: $colorTerciario;
+    font-size: 16px;
+    font-family: $fuenteContenido;
+  }
+
+}
+}

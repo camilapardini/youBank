@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tipografias -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Maitree:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mada:wght@200;300;400;500;600;700;900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- Scripts -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script defer src="js/cards.js"></script>
+  <script defer src="js/objetos.js"></script>
+  <script defer src="js/form.js"></script>
+
+  <!-- Estilos css -->
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>Document</title>
+
+</head>
+​
+​
+
+<body>
+
+  <header>
+    <a href="index.html"><img src="img/logoybk2.png" alt="Logo" class="logo"></a>
+    <nav>
+      <input type="checkbox" id="nav">
+      <label for="nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <ul class="menu">
+        <li><a href="index.html" class="menu__enlace hvr-grow">Inicio</a></li>
+        <li><a href="#quienesSomos" class="menu__enlace hvr-grow">Quienes somos</a></li>
+        <li><a href="#formularioSolicitud" class="menu__enlace hvr-grow">Tarjetas</a>
+        <li><a href="#formContactanos" class="menu__enlace-contactanos hvr-grow">Contactanos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ​ Seccion principal con nombre del banco e imagen -->
+  <main class="inicio">
+    <span class="fondo"></span>
+    <div class="tituloPrincipal">
+      <h1>youBank</h1>
+      <h2>solicitá tu tarjeta con un solo click</h2>
+      <a href="#formularioSolicitud" class="botonTarjeta hvr-shutter-out-vertical">¡LA QUIERO!</a>
+    </div>
+  </main>
+  ​
+  <!-- Presentación de quienes somos y beneficios -->
+  <section id="quienesSomos">
+    <div class="presentacion">
+      <h1>Quienes somos</h1>
+      <p>Somos un banco digital que te permitirá disfrutar de tu dinero de una forma mas sencilla y sin trabas en el camino.
+        Queremos que te olvides de los trámites y las filas, por eso youBank te permite solicitar a partir de los 16 años, una tarjeta de crédito a tu nombre, con increíbles
+        beneficios y descuentos en los mejores rubros. ¿Qué estás esperando?
+      </p>
+    </div>
+
+    <div class="beneficios">
+      <div class="beneficios-card">
+        <img src="img/comprar.png" alt="comprar" class="imgBeneficios">
+        <h3>Increibles descuentos</h3>
+        <p>Comprá lo mejor para vos, tus amigos y tu familia. Conocé y disfrutá de todos los descuentos y promociones que tenemos. Con Ybk conseguí las mejores experiencias y productos. </p>
+      </div>
+      <div class="beneficios-card">
+        <img src="img/promocion.png" alt="comprar" class="imgBeneficios">
+        <h3>100% gratuita</h3>
+        <p>En youBank sabemos que sos especial y por eso creamos una tarjeta 100% gratuita. Podés pedirla en 5 minutos y recibirla en menos de 48hs. Y porque somos un banco de verdad, también nos hacemos cargo del envío!</p>
+      </div>
+      <div class="beneficios-card">
+        <img src="img/fondos.png" alt="comprar" class="imgBeneficios">
+        <h3>Limites elevados</h3>
+        <p>Porque ahora vos decidís cuánto gastar en lo que más te gusta, te traemos este beneficio para que disfrutes de tu tarjeta las 24 horas del día durante todo el año.</p>
+      </div>
+    </div>
+  </section>
+  ​
+  <!-- Formulario para solicitar tarjeta -->
+  <section id="formularioSolicitud">
+    <span class="fondo"></span>
+    <h1>Solicitá tu tarjeta</h1>
+    <form id="cargaSolicitud">
+      <p class="nombreTitular">Ingresá tu nombre completo<input id="nombreUsuario"></p>
+
+      <div class="preguntasForm">
+        <label for="edad">¿Cual es tu edad?</label>
+        <div class="sel sel--black-panther">
+
+          <select name="edad" class="select-profession" id="edad">
+            <option value="seleccion">Seleccione una opcion</option>
+            <option value="Menor de 16 años">Menor de 16 años</option>
+            <option value="Entre 16 y 20 años">Entre 16 y 20 años</option>
+            <option value="Entre 20 y 30 años">Entre 20 y 30 años</option>
+            <option value="Mayor de 30 años">Mayor de 30 años</option>
+          </select>
+        </div>
+        <label for="sueldo">¿Cual es tu sueldo bruto?</label>
+        <div class="sel sel--superman">
+
+          <select name="sueldo" class="select-superpower" id="sueldo">
+            <option value="seleccion">Seleccione una opcion</option>
+            <option value="Menos de 30000">Menos de 30000</option>
+            <option value="Entre 30000 y 50000">Entre 30000 y 50000</option>
+            <option value="Mas de 50000">Mas de 50000</option>
+          </select>
+        </div>
+      </div>
+      <button id="btn" class="botonSolicitar hvr-shutter-out-vertical">Solicitar tarjeta</button>
+    </form>
+
+    <div id="error"></div>
+    <div id="entrega"></div>
+  </section>
+  ​
+  <!-- Contenido principal de cada tarjeta con sus beneficios -->
+  <section id="contenidoPrincipal">
+    ​ <div class="divCards"></div>
+  </section>
+
+  <!-- Formulario de contacto -->
+  <section id="formContactanos">
+    <h1 class="recibilaEnCasa">¡Obtenela en tu casa!</h1>
+    <form id="form-contacto" action="send_me">
+      <div class="conjuntoCampos">
+        <div class="inputgroup">
+          <label for="nombreCompleto">Nombre Completo</label>
+          <input id="nombreCompleto" class="text form-input" type="name" />
+        </div>
+      </div>
+      <div class="conjuntoCampos">
+        <div class="inputgroup">
+          <label for="dni">Numero de Documento</label>
+          <input id="dni" class="text form-input" type="name" />
+        </div>
+      </div>
+      <div class="conjuntoCampos">
+        <div class="inputgroup inputgroup--half">
+          <label for="email">Email</label>
+          <input id="email" class="text form-input" type="email" />
+        </div>
+        <div class="inputgroup">
+          <label for="telefono">Telefono</label>
+          <input id="telefono" class="form-input" type="number">
+        </div>
+      </div>
+      <div class="conjuntoCampos">
+        <div class="inputgroup inputgroup--half">
+          <label for="direccion">Direccion</label>
+          <input id="direccion" class="text form-input" type="text" />
+        </div>
+      </div>
+      <div class="conjuntoCampos">
+        <div class="inputgroup inputgroup--half">
+          <label for="piso">Piso/dto</label>
+          <input id="piso" class="text form-input" type="number" />
+        </div>
+        <div class="inputgroup inputgroup--half">
+          <label for="cp">Codigo Postal</label>
+          <input id="cp" class="text form-input" type="text" />
+        </div>
+      </div>
+      <div class="contact-form__button">
+        <button class="botonEnviar hvr-shutter-out-vertical" type="submit" name="submit">Enviar</button>
+      </div>
+      <div class="contact-form__message"></div>
+    </form>
+
+    <div class="container-all" id="modal">
+
+      <div class="popUpConfirmacion">
+        <h2>Felicitaciones</h2>
+        <i class="fas fa-check-circle"></i>
+        <p>En el transcurso de los próximos 10 días hábiles recibirás la tarjeta youBank en tu domicilio</p>
+        <h3>¡A disfrutarla!</h3>
+        <button class="botonAceptar hvr-shutter-out-vertical">Aceptar</button>
+      </div>
+    </div>
+    
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>youBank</h6>
+          <p class="text-justify">YouBank fue creado en Buenos Aires, Argentina. Nuestra misión es poder agilizar la dinámica para el pedido de una tarjeta de crédito para nuestros clientes
+            Contamos con oficinas en la que trabajan nuestros empleados brindando la mejor atención y soporte por canales digitales. Si queres unirte a nuestro equipo, no dudes en ponerte en contacto con nosotros.</p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Legales</h6>
+          <ul class="footer-links">
+            <li>Términos y condiciones</li>
+            <li>Defensa del consumidor</li>
+            <li>Políticas BCRA</li>
+            <li>Tasas y comisiones</li>
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>NOSOTROS</h6>
+          <ul class="footer-links">
+            <li>Sobre nosotros</li>
+            <li>Contactanos</li>
+            <li>Políticas de privacidad</li>
+            <li>San Martín 545, CABA</li>
+            <li>0800-555-6775</li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; Camila Pardini 2021.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="instagram" href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fab fa-linkedin-in"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+       
+
+
+
+
+  
