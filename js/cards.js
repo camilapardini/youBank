@@ -544,7 +544,7 @@ $(() => {
       </div>
     </div>
     <div class="contenedorTexto">
-    <h3>Gastando más de 10mil en supermercados te reintegramos el 20%</h3>
+    <h3>Gastando más de 10mil en super te reintegramos el 20%</h3>
     </div>
     </div>
           <div class="cardBeneficios">
@@ -649,7 +649,7 @@ $(() => {
                     </div>
                   </div>
                   <div class="contenedorTexto">
-                  <h3>Accedé a descuentos mensuales gimnasios y shoppings</h3>
+                  <h3>Descuentos mensuales gimnasios y shoppings</h3>
                   </div>
                   </div>
                         <div class="cardBeneficios">

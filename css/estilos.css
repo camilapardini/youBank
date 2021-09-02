@@ -24,7 +24,6 @@ header {
       right: 0;
       height: 70px;
       width: 70px;
-      background: #4b77c4;
       cursor: pointer;
       z-index: 1; }
     header nav > label > span {
@@ -33,7 +32,7 @@ header {
       height: 4px;
       width: 25px;
       border-radius: 1px;
-      background: #e3e0e0;
+      background: #263150;
       transition: 0.5s; }
       header nav > label > span:nth-child(1) {
         margin-top: 40px; }
@@ -72,7 +71,7 @@ header {
     header input[type=checkbox]:checked ~ .menu {
       top: 0; }
     header input[type=checkbox]:checked ~ label span {
-      background: #fff; }
+      background: #4b77c4; }
       header input[type=checkbox]:checked ~ label span:nth-child(1) {
         transform: translateY(8px) rotate(45deg); }
       header input[type=checkbox]:checked ~ label span:nth-child(2) {
@@ -142,13 +141,13 @@ header {
 /*--- RESPONSIVE MEDIA QUERY ----*/
 @media only screen and (max-width: 550px) {
   header {
-    height: 15vh; }
+    height: 5vh; }
     header .logo {
-      height: 4.8em; } }
+      height: 3.8em; } }
 
 @media (max-width: 1093px) {
   header .logo {
-    padding-left: 40px; }
+    padding-left: 10px; }
   header .menu {
     position: absolute;
     top: 100px;
@@ -159,17 +158,23 @@ header {
     margin: 0;
     top: -100vh;
     left: 0;
-    height: 75vh;
+    height: 40vh;
     width: 100%;
-    background: #4b77c4;
-    z-index: 1; }
+    z-index: 99;
+    background-color: #de8843; }
     header .menu li {
-      margin: 20px;
-      font-size: 1.8em;
-      color: #fff; }
+      margin: 8px;
+      font-size: 1.2em;
+      color: #fff; } }
+    @media (max-width: 1093px) and (min-width: 1281px) {
+      header .menu li {
+        margin: 20px;
+        font-size: 1.8em; } }
+
+@media (max-width: 1093px) {
   header nav label {
     display: block;
-    z-index: 10; } }
+    z-index: 100; } }
 
 /* ------------- FOOTER ------------- */
 .site-footer {
@@ -285,13 +290,21 @@ header {
   display: none; }
   #formContactanos .recibilaEnCasa {
     font-family: "Mada", sans-serif;
-    font-size: 4rem;
+    font-size: 3rem;
     color: #263150; }
+    @media (min-width: 1281px) {
+      #formContactanos .recibilaEnCasa {
+        font-size: 4rem; } }
 
 #form-contacto {
-  width: 100%;
+  width: 85%;
   max-width: 680px;
-  margin: 5rem auto 4rem; }
+  margin: 2rem auto 3rem; }
+  @media (min-width: 1281px) {
+    #form-contacto {
+      width: 100%;
+      margin: 5rem auto 4rem;
+      max-width: 680px; } }
   #form-contacto .conjuntoCampos {
     display: flex;
     flex-flow: row wrap;
@@ -324,9 +337,13 @@ header {
         padding: .4rem 0 0 1.2rem;
         color: #0f1010;
         font-family: "Kanit", sans-serif;
-        font-size: 2rem;
+        font-size: 1.5rem;
         -webkit-transition: all 300ms ease;
         transition: all 300ms ease; }
+        @media (min-width: 1281px) {
+          #form-contacto .conjuntoCampos .inputgroup input,
+          #form-contacto .conjuntoCampos .inputgroup textarea {
+            font-size: 2rem; } }
     #form-contacto .conjuntoCampos .inputgroup.active label {
       color: #4b77c4;
       font-size: 1.3rem;
@@ -343,10 +360,10 @@ header {
     align-items: center; }
     #form-contacto .contact-form__button .botonEnviar {
       box-sizing: border-box;
-      min-width: 140px;
+      min-width: 100px;
       -webkit-transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
       transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
-      width: 20%;
+      width: 15%;
       color: #263150;
       text-decoration: none;
       font-family: "Mada", sans-serif;
@@ -355,52 +372,16 @@ header {
       margin-top: 4rem;
       background-color: #aed29b;
       border-radius: 15px;
-      padding: 0.9rem;
+      padding: 0.5rem;
       border: none;
       box-shadow: 3px 5px 6px rgba(0, 0, 0, 0.5); }
-  #form-contacto .form-contacto__message {
-    text-align: center;
-    color: #33373b;
-    font-family: "Kanit", sans-serif; }
-  #form-contacto .form-contacto__message.success {
-    color: #20c361; }
-  #form-contacto .form-contacto__message.error {
-    color: #ec3e3e; }
+      @media (min-width: 1281px) {
+        #form-contacto .contact-form__button .botonEnviar {
+          font-size: 2rem;
+          padding: 0.9rem;
+          width: 20%;
+          min-width: 140px; } }
 
-/*
-.popUpConfirmacion{
-   
-    position: fixed;
-    display: none;
-    font-family: $fuenteContenido;
-    border: 5px solid $colorSecundario;
-    border-radius: 25px;
-    width: 20%;
-    height: 35%;
-    padding: 3rem;
-    background-color: white;
-    z-index: 10;
-    box-shadow: 3px 5px 6px rgba(0, 0, 0, 0.523);
-    position: fixed;
-    top: 40%;
-    right: 40%;
-
-
-    .botonAceptar {
-        color: $colorTerciario;
-        text-decoration: none;
-        font-family: $fuenteSubtitulos;
-        font-weight: 500;
-        font-size: 1.6rem;
-        margin-top: 3rem;
-        background-color: #aed29b;
-        border-radius: 15px;
-        padding: 0.9rem;
-        box-shadow: 3px 2px 3px rgba(0, 0, 0, .5);
-       
-      }
-}
-*/
 .container-all {
   display: none;
   width: 100%;
@@ -408,7 +389,8 @@ header {
   position: fixed;
   top: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.6); }
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 30; }
 
 .popUpConfirmacion {
   display: none;
@@ -416,49 +398,80 @@ header {
   font-family: "Kanit", sans-serif;
   border: 5px solid #de8843;
   border-radius: 25px;
-  width: 20%;
-  height: 35%;
+  width: 60%;
+  height: 50%;
   padding: 3rem;
   background-color: white;
   z-index: 20;
   box-shadow: 3px 5px 6px rgba(0, 0, 0, 0.523);
   top: 40%;
-  right: 40%; }
+  right: 20%; }
+  @media (min-width: 1281px) {
+    .popUpConfirmacion {
+      width: 20%;
+      height: 35%;
+      padding: 3rem;
+      right: 40%; } }
+  .popUpConfirmacion h2 {
+    font-size: 20px; }
+    @media (min-width: 1281px) {
+      .popUpConfirmacion h2 {
+        font-size: 30px; } }
+  .popUpConfirmacion h3 {
+    font-size: 14px; }
+    @media (min-width: 1281px) {
+      .popUpConfirmacion h3 {
+        font-size: 24px; } }
   .popUpConfirmacion .botonAceptar {
     color: #263150;
     text-decoration: none;
     font-family: "Mada", sans-serif;
     font-weight: 500;
     font-size: 1.6rem;
-    margin-top: 3rem;
+    margin-top: .3rem;
     background-color: #aed29b;
     border-radius: 15px;
     padding: 0.9rem;
     box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.5); }
+    @media (min-width: 1281px) {
+      .popUpConfirmacion .botonAceptar {
+        margin-top: 3rem; } }
 
 /* ------------- FORMULARIO SOLICITUD ------------- */
 #formularioSolicitud {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; }
+  width: 100%;
+  display: block; }
+  @media (min-width: 1281px) {
+    #formularioSolicitud {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; } }
   #formularioSolicitud .fondo {
-    top: 90vw;
-    right: 70vw;
-    width: 940px;
-    height: 400px;
-    transform: rotate(-40deg);
-    z-index: -1;
-    bottom: 29vw;
-    opacity: 0.10;
-    background: #de8843;
-    border-radius: 300px;
-    position: absolute; }
+    display: none; }
+    @media (min-width: 1281px) {
+      #formularioSolicitud .fondo {
+        top: 90vw;
+        right: 70vw;
+        width: 940px;
+        height: 400px;
+        transform: rotate(-40deg);
+        z-index: -1;
+        bottom: 29vw;
+        opacity: 0.10;
+        background: #de8843;
+        border-radius: 300px;
+        position: absolute; } }
   #formularioSolicitud h1 {
-    margin: 4rem;
+    margin: 1rem;
     font-family: "Mada", sans-serif;
-    font-size: 4rem;
-    color: #263150; }
+    font-size: 3rem;
+    color: #263150;
+    text-align: center; }
+    @media (min-width: 1281px) {
+      #formularioSolicitud h1 {
+        margin: 4rem;
+        font-size: 4rem; } }
   #formularioSolicitud form {
     display: flex;
     justify-content: center;
@@ -467,42 +480,68 @@ header {
     font-family: "Kanit", sans-serif;
     color: #263150; }
     #formularioSolicitud form .nombreTitular {
-      font-size: 2rem; }
+      font-size: 1.6rem;
+      text-align: center;
+      margin-top: 2rem; }
+      @media (min-width: 1281px) {
+        #formularioSolicitud form .nombreTitular {
+          font-size: 2rem; } }
     #formularioSolicitud form #nombreUsuario {
-      width: 80%;
-      padding: 10px;
+      width: 60%;
+      text-align: center;
       box-sizing: border-box;
       background-color: none;
+      margin-top: 2rem;
       outline: none;
       resize: none;
       border: 0;
       transition: all .3s;
       border-bottom: 3px solid #263150; }
+      @media (min-width: 1281px) {
+        #formularioSolicitud form #nombreUsuario {
+          width: 80%;
+          padding: 10px;
+          text-align: left;
+          margin: 0; } }
       #formularioSolicitud form #nombreUsuario:focus {
         border-bottom: 2px solid #de8843; }
     #formularioSolicitud form .preguntasForm {
       margin: 4rem; }
       #formularioSolicitud form .preguntasForm label {
-        font-size: 2rem;
+        font-size: 1.7rem;
         padding: 2rem;
         font-weight: 400; }
+        @media (min-width: 1281px) {
+          #formularioSolicitud form .preguntasForm label {
+            font-size: 2rem; } }
     #formularioSolicitud form .botonSolicitar {
       color: #263150;
       text-decoration: none;
       font-family: "Mada", sans-serif;
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: 500;
-      margin-top: 4rem;
+      margin-top: 1rem;
       background-color: #aed29b;
       border-radius: 15px;
-      padding: 0.9rem;
+      padding: 0.7rem;
       border: none;
       box-shadow: 3px 5px 6px rgba(0, 0, 0, 0.5);
       z-index: 10; }
+      @media (min-width: 1281px) {
+        #formularioSolicitud form .botonSolicitar {
+          font-size: 2rem;
+          padding: 0.9rem;
+          margin-top: 4rem; } }
   #formularioSolicitud #error {
     font-family: "Kanit", sans-serif;
-    margin-top: 5rem;
-    font-size: 2rem; }
+    margin-top: 3rem;
+    margin-right: 0;
+    font-size: 1.5rem;
+    text-align: center; }
+    @media (min-width: 1281px) {
+      #formularioSolicitud #error {
+        margin-top: 5rem;
+        font-size: 2rem; } }
 
 /*----- OPCIONES DESPLEGABLES FORM -------*/
 @keyframes textEnter {
@@ -542,6 +581,9 @@ header {
   position: relative;
   cursor: pointer;
   border-bottom: 3px solid #263150bd; }
+  @media (min-width: 1281px) {
+    .sel {
+      font-size: 1.1rem; } }
   .sel::before {
     position: absolute;
     content: '\f078';
@@ -566,12 +608,15 @@ header {
 .sel__placeholder {
   display: block;
   font-family: "Kanit", sans-serif;
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding: 0.2em 0.5em;
   text-align: left;
   pointer-events: none;
   user-select: none;
   visibility: visible; }
+  @media (min-width: 1281px) {
+    .sel__placeholder {
+      font-size: 2rem; } }
   .sel__placeholder::before {
     position: absolute;
     top: 0;
@@ -614,10 +659,10 @@ header {
   display: inline; }
 
 .sel--black-panther {
-  z-index: 3; }
+  z-index: 13; }
 
 .sel--superman {
-  z-index: 2; }
+  z-index: 12; }
 
 /* ------------- CONTENIDO CARDS ------------- */
 #contenidoPrincipal {
@@ -625,9 +670,14 @@ header {
   height: auto; }
   #contenidoPrincipal .tituloTarjeta {
     font-family: "Mada", sans-serif;
-    font-size: 4rem;
+    font-size: 3rem;
+    text-align: center;
     color: #263150;
     margin-bottom: 2rem; }
+    @media (min-width: 1281px) {
+      #contenidoPrincipal .tituloTarjeta {
+        font-size: 4rem;
+        margin-bottom: 2rem; } }
     #contenidoPrincipal .tituloTarjeta .spanColors {
       background-image: linear-gradient(to left, violet, #7937a9, #6eb85f, #2d2d9a, #e9e958, #eec26f, #ed6969);
       -webkit-background-clip: text;
@@ -644,10 +694,13 @@ header {
       color: black; }
   #contenidoPrincipal .marcaTarjeta {
     font-family: "Mada", sans-serif;
-    font-size: 2.5rem;
+    font-size: 1.9rem;
     color: #263150;
     font-weight: 600;
     margin-bottom: 5rem; }
+    @media (min-width: 1281px) {
+      #contenidoPrincipal .marcaTarjeta {
+        font-size: 2.5rem; } }
 
 .infoTarjeta {
   display: flex;
@@ -655,74 +708,104 @@ header {
   flex-direction: column; }
 
 .cardColor {
-  width: 400px;
+  width: 320px;
   background-image: url(../img/youcolor.jpg);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5), -1px -1px 2px #aaa, 1px 1px 2px #555;
   backdrop-filter: blur(0.8rem);
   padding: 1.5rem;
   border-radius: 1rem;
   animation: 2s cubic-bezier(0.16, 1, 0.3, 1) cardEnter; }
+  @media (min-width: 1281px) {
+    .cardColor {
+      width: 400px; } }
 
 .cardVerde {
-  width: 400px;
+  width: 320px;
   background-image: url(../img/green-background.jpeg);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5), -1px -1px 2px #aaa, 1px 1px 2px #555;
   backdrop-filter: blur(0.8rem);
   padding: 1.5rem;
   border-radius: 1rem;
   animation: 2s cubic-bezier(0.16, 1, 0.3, 1) cardEnter; }
+  @media (min-width: 1281px) {
+    .cardVerde {
+      width: 400px; } }
 
 .cardPlateada {
-  width: 400px;
+  width: 320px;
   background-image: url(../img/platinum-background.jpeg);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5), -1px -1px 2px #aaa, 1px 1px 2px #555;
   backdrop-filter: blur(0.8rem);
   padding: 1.5rem;
   border-radius: 1rem;
   animation: 1s cubic-bezier(0.16, 1, 0.3, 1) cardEnter; }
+  @media (min-width: 1281px) {
+    .cardPlateada {
+      width: 400px; } }
 
 .cardDorada {
-  width: 400px;
+  width: 320px;
   background-image: url(../img/gold-background.jpeg);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5), -1px -1px 2px #aaa, 1px 1px 2px #555;
   backdrop-filter: blur(0.8rem);
   padding: 1.5rem;
   border-radius: 1rem;
   animation: 1s cubic-bezier(0.16, 1, 0.3, 1) cardEnter; }
+  @media (min-width: 1281px) {
+    .cardDorada {
+      width: 400px; } }
 
 .cardNegra {
-  width: 400px;
+  width: 320px;
   background-image: url(../img/black-background.jpg);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5), -1px -1px 2px #aaa, 1px 1px 2px #555;
   backdrop-filter: blur(0.8rem);
   padding: 1.5rem;
   border-radius: 1rem;
   animation: 1s cubic-bezier(0.16, 1, 0.3, 1) cardEnter; }
+  @media (min-width: 1281px) {
+    .cardNegra {
+      width: 400px; } }
 
 .card__row {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 2rem; }
+  padding-bottom: 0rem; }
+  @media (min-width: 1281px) {
+    .card__row {
+      padding-bottom: 2rem; } }
 
 .card__title {
   font-weight: 600;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #19191a95;
   margin: 1rem 0 1.5rem;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.66); }
+  @media (min-width: 1281px) {
+    .card__title {
+      font-size: 2.5rem; } }
 
 .card__col {
   padding-right: 2rem; }
+  @media (min-width: 1281px) {
+    .card__col {
+      padding-right: 2rem; } }
 
 .card__input {
   background: none;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #fff;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); }
+  @media (min-width: 1281px) {
+    .card__input {
+      font-size: 1.2rem; } }
 
 .card__input--large {
-  font-size: 2rem; }
+  font-size: 1.8rem; }
+  @media (min-width: 1281px) {
+    .card__input--large {
+      font-size: 2rem; } }
 
 .card__input::placeholder {
   color: rgba(255, 255, 255, 0.5);
@@ -742,11 +825,18 @@ header {
   align-self: flex-end; }
 
 .card__chip img {
-  width: 5rem; }
+  width: 4rem; }
+  @media (min-width: 1281px) {
+    .card__chip img {
+      width: 5rem; } }
 
 .card__brand img {
-  width: 5rem;
-  height: 5rem; }
+  width: 4rem;
+  height: 4rem; }
+  @media (min-width: 1281px) {
+    .card__brand img {
+      width: 5rem;
+      height: 5rem; } }
 
 @keyframes cardEnter {
   from {
@@ -762,49 +852,67 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5rem;
-  /*
-  .pUsarla{
-    font-family: $fuenteContenido;
-    font-size: 1.6rem;
-    color: $colorTerciario
-  }*/ }
-  .caracteristicasTarjeta .tituloUsarla {
-    font-family: "Mada", sans-serif;
-    color: #263150;
-    font-size: 3.2rem; }
+  margin-bottom: 5rem; }
   .caracteristicasTarjeta .contenedorCards {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-    margin-top: 5rem; }
+    margin-top: 3rem;
+    width: 100%; }
+    @media (min-width: 1281px) {
+      .caracteristicasTarjeta .contenedorCards {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5rem; } }
     .caracteristicasTarjeta .contenedorCards .cardBeneficios {
       display: inline-block;
-      width: 190px;
+      width: 120px;
       text-align: center;
       margin: 3rem; }
+      @media (min-width: 1281px) {
+        .caracteristicasTarjeta .contenedorCards .cardBeneficios {
+          width: 190px;
+          text-align: center;
+          margin: 3rem; } }
     .caracteristicasTarjeta .contenedorCards .imgCard {
-      height: 145px;
-      width: 190px;
+      height: 140px;
+      width: 120px;
       overflow: hidden;
       border-radius: 0px 0px 20px 20px; }
+      @media (min-width: 1281px) {
+        .caracteristicasTarjeta .contenedorCards .imgCard {
+          height: 145px;
+          width: 190px; } }
     .caracteristicasTarjeta .contenedorCards .imgCard img {
-      height: 120px; }
+      height: 80px; }
+      @media (min-width: 1281px) {
+        .caracteristicasTarjeta .contenedorCards .imgCard img {
+          height: 120px; } }
     .caracteristicasTarjeta .contenedorCards .contenedorTexto {
       box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-      padding: 95px 10px 0px 10px;
+      padding: 55px 0px 0px 0px;
       border-radius: 20px;
       background: #fff;
       margin: -120px 0px 0px 0px;
       line-height: 19px;
       font-size: 14px;
-      height: 180px; }
+      height: 135px; }
+      @media (min-width: 1281px) {
+        .caracteristicasTarjeta .contenedorCards .contenedorTexto {
+          padding: 95px 10px 0px 10px;
+          font-size: 14px;
+          height: 180px; } }
     .caracteristicasTarjeta .contenedorCards .contenedorTexto h3 {
       margin: 20px 0px 10px 0px;
       color: #263150;
-      font-size: 16px;
+      font-size: 14px;
       font-family: "Kanit", sans-serif; }
+      @media (min-width: 1281px) {
+        .caracteristicasTarjeta .contenedorCards .contenedorTexto h3 {
+          font-size: 16px; } }
 
 * {
   margin: 0;
@@ -817,61 +925,100 @@ body {
   /* ------------- MAIN ------------- */
   /* ------------- QUIENES SOMOS ------------- */ }
   body .inicio {
-    height: 80vh;
-    width: 95%;
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 5rem;
     background-image: url(../img/7849.jpg);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: right;
-    display: flex;
-    align-items: flex-start;
-    justify-content: top; }
+    background-position: bottom; }
+    @media (min-width: 1281px) {
+      body .inicio {
+        height: 80vh;
+        width: 95%;
+        background-image: url(../img/7849.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        display: flex;
+        align-items: flex-start;
+        justify-content: left; } }
     body .inicio .fondo {
-      top: -7vw;
-      right: 50vw;
-      width: 1400px;
-      height: 500px;
-      transform: rotate(-140deg);
-      z-index: 1;
-      bottom: 29vw;
-      opacity: 0.10;
-      background: #4b77c4;
-      border-radius: 300px;
-      position: absolute; }
+      display: none; }
+      @media (min-width: 1281px) {
+        body .inicio .fondo {
+          top: -7vw;
+          right: 50vw;
+          width: 1400px;
+          height: 500px;
+          transform: rotate(-140deg);
+          z-index: 1;
+          bottom: 29vw;
+          opacity: 0.10;
+          background: #4b77c4;
+          border-radius: 300px;
+          position: absolute; } }
     body .inicio .tituloPrincipal {
-      width: 55%;
-      height: 70%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       z-index: 1; }
+      @media (min-width: 1281px) {
+        body .inicio .tituloPrincipal {
+          width: 55%;
+          height: 70%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          z-index: 1; } }
       body .inicio .tituloPrincipal h1 {
         font-family: "Maitree", serif;
         color: #263150;
-        font-size: 8rem;
+        font-size: 5.5rem;
         font-weight: 900; }
+        @media (min-width: 1281px) {
+          body .inicio .tituloPrincipal h1 {
+            font-family: "Maitree", serif;
+            color: #263150;
+            font-size: 8rem;
+            font-weight: 900; } }
       body .inicio .tituloPrincipal h2 {
         font-family: "Mada", sans-serif;
-        color: #de8843; }
+        color: #de8843;
+        font-size: 20px; }
+        @media (min-width: 1281px) {
+          body .inicio .tituloPrincipal h2 {
+            font-size: 30px; } }
       body .inicio .tituloPrincipal .botonTarjeta {
         color: #263150;
         text-decoration: none;
         font-family: "Mada", sans-serif;
-        font-size: 2.2rem;
+        font-size: 1.9rem;
         font-weight: 500;
         margin-top: 3rem;
         background-color: #aed29b;
         border-radius: 15px;
-        padding: 0.9rem;
+        padding: 0.5rem;
         box-shadow: 3px 5px 6px rgba(0, 0, 0, 0.5); }
+        @media (min-width: 1281px) {
+          body .inicio .tituloPrincipal .botonTarjeta {
+            font-size: 2.2rem;
+            padding: 0.9rem; } }
   body #quienesSomos {
-    margin: 6rem;
-    color: #263150;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center; }
+    margin: 0;
+    color: #263150; }
+    @media (min-width: 1281px) {
+      body #quienesSomos {
+        margin: 6rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center; } }
     body #quienesSomos .presentacion {
       display: flex;
       justify-content: center;
@@ -879,34 +1026,63 @@ body {
       flex-direction: column; }
       body #quienesSomos .presentacion h1 {
         font-family: "Mada", sans-serif;
-        font-size: 4rem;
+        font-size: 3.2rem;
         margin: 2rem; }
+        @media (min-width: 1281px) {
+          body #quienesSomos .presentacion h1 {
+            font-size: 4rem; } }
       body #quienesSomos .presentacion p {
-        width: 40%;
+        width: 95%;
         text-align: center;
         font-family: "Kanit", sans-serif;
-        font-size: 2rem; }
+        font-size: 1.6rem; }
+        @media (min-width: 1281px) {
+          body #quienesSomos .presentacion p {
+            width: 40%;
+            font-size: 2rem; } }
     body #quienesSomos .beneficios {
-      display: flex;
-      justify-content: center;
-      width: 80%;
-      align-items: center;
-      flex-direction: row; }
+      display: block;
+      width: 90%; }
+      @media (min-width: 1281px) {
+        body #quienesSomos .beneficios {
+          display: flex;
+          justify-content: center;
+          width: 80%;
+          align-items: center;
+          flex-direction: row; } }
       body #quienesSomos .beneficios-card {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        width: 40%;
-        padding: 2rem;
-        margin: 4rem;
+        width: 100%;
+        padding: 1rem;
+        margin: 2rem;
         text-align: center; }
+        @media (min-width: 1281px) {
+          body #quienesSomos .beneficios-card {
+            width: 40%;
+            padding: 2rem;
+            margin: 4rem;
+            text-align: center; } }
         body #quienesSomos .beneficios-card .imgBeneficios {
-          height: 120px;
-          width: 120px; }
+          height: 80px;
+          width: 80px; }
+          @media (min-width: 1281px) {
+            body #quienesSomos .beneficios-card .imgBeneficios {
+              height: 120px;
+              width: 120px; } }
         body #quienesSomos .beneficios-card h3 {
-          color: #de8843; }
+          color: #de8843;
+          font-size: 2rem; }
+          @media (min-width: 1281px) {
+            body #quienesSomos .beneficios-card h3 {
+              font-size: 24px; } }
         body #quienesSomos .beneficios-card p {
-          font-size: 1.6rem;
+          font-size: 1.4rem;
           font-weight: 500;
-          line-height: 2.6rem; }
+          line-height: 2.4rem; }
+          @media (min-width: 1281px) {
+            body #quienesSomos .beneficios-card p {
+              font-size: 1.6rem;
+              line-height: 2.6rem; } }

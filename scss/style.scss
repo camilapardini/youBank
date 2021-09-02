@@ -2,14 +2,10 @@
 @import "footer";
 @import "form-contactanos";
 @import "form-solicitud";
+@import "variables";
 
-$colorPrincipal: #4b77c4;
-$colorSecundario: #de8843;
-$colorTerciario: #263150;
-$colorCuarto: #aed29b;
-$fuenteTitulos: 'Maitree', serif;
-$fuenteSubtitulos: 'Mada', sans-serif;
-$fuenteContenido: 'Kanit', sans-serif;
+
+
 
 
 
@@ -27,62 +23,113 @@ body {
   /* ------------- MAIN ------------- */
 
   .inicio {
-    height: 80vh;
-    width: 95%;
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 5rem;
     background-image: url(../img/7849.jpg);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: right;
-    display: flex;
-    align-items: flex-start;
-    justify-content: top;
+    background-position: bottom;
+
+    @media (min-width:320px){
+
+    }
+
+    @media (min-width:1281px) {
+      height: 80vh;
+      width: 95%;
+      background-image: url(../img/7849.jpg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right;
+      display: flex;
+      align-items: flex-start;
+      justify-content: left;
+    }
+
 
     .fondo{
-      top: -7vw;
-      right: 50vw;
-      width: 1400px;
-      height: 500px;
-      transform: rotate(-140deg);
-      z-index: 1;
-      bottom: 29vw;
-      opacity: 0.10;
-      background: $colorPrincipal;
-      border-radius: 300px;
-      position: absolute;
+      display: none;
+
+      @media (min-width:1281px){
+        top: -7vw;
+        right: 50vw;
+        width: 1400px;
+        height: 500px;
+        transform: rotate(-140deg);
+        z-index: 1;
+        bottom: 29vw;
+        opacity: 0.10;
+        background: $colorPrincipal;
+        border-radius: 300px;
+        position: absolute;
+      }
     }
+   
     .tituloPrincipal {
-      width: 55%;
-      height: 70%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       z-index: 1;
 
+      @media (min-width:320px){
+
+      }
+  
+      @media (min-width:1281px){
+        width: 55%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      }
+
       h1 {
         font-family: $fuenteTitulos;
         color: $colorTerciario;
-        font-size: 8rem;
+        font-size: 5.5rem;
         font-weight: 900;
+
+        @media (min-width:1281px){
+          font-family: $fuenteTitulos;
+          color: $colorTerciario;
+          font-size: 8rem;
+          font-weight: 900;
+        }
       }
 
       h2 {
         font-family: $fuenteSubtitulos;
         color: $colorSecundario;
+        font-size: 20px;
+
+        @media (min-width:1281px){
+          font-size: 30px;
+        }
       }
 
       .botonTarjeta {
         color: $colorTerciario;
         text-decoration: none;
         font-family: $fuenteSubtitulos;
-        font-size: 2.2rem;
+        font-size: 1.9rem;
         font-weight: 500;
         margin-top: 3rem;
         background-color: #aed29b;
         border-radius: 15px;
-        padding: 0.9rem;
+        padding: 0.5rem;
         box-shadow: 3px 5px 6px rgba(0, 0, 0, .5);
        
+        @media (min-width:1281px) {
+          font-size: 2.2rem;
+          padding: 0.9rem;
+        }
       }
 
     }
@@ -92,12 +139,16 @@ body {
   /* ------------- QUIENES SOMOS ------------- */
 
   #quienesSomos {
-    margin: 6rem;
+    margin: 0;
     color: $colorTerciario;
+
+    @media (min-width:1281px){
+      margin: 6rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    }
 
     .presentacion {
 
@@ -108,48 +159,85 @@ body {
 
       h1 {
         font-family: $fuenteSubtitulos;
-        font-size: 4rem;
+        font-size: 3.2rem;
         margin: 2rem;
+
+        @media (min-width:1281px){
+          font-size: 4rem;
+        }
+    
       }
 
       p {
-        width: 40%;
+        width: 95%;
         text-align: center;
         font-family: $fuenteContenido;
-        font-size: 2rem;
+        font-size: 1.6rem;
+
+        @media (min-width:1281px){
+          width: 40%;
+          font-size: 2rem;
+        }
       }
     }
 
     .beneficios {
-      display: flex;
-      justify-content: center;
-      width: 80%;
-      align-items: center;
-      flex-direction: row;
+      display: block;
+      width: 90%;
+
+      @media (min-width:1281px){
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        align-items: center;
+        flex-direction: row;
+      }
 
       &-card {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        width: 100%;
+        padding: 1rem;
+        margin: 2rem;
+        text-align: center;
+
+        @media (min-width:1281px){
         width: 40%;
         padding: 2rem;
         margin: 4rem;
         text-align: center;
+        }
 
         .imgBeneficios {
-          height: 120px;
-          width: 120px;
+          height: 80px;
+          width: 80px;
+
+          @media (min-width:1281px){
+            height: 120px;
+            width: 120px;
+            }
         }
 
         h3 {
           color: $colorSecundario;
+          font-size: 2rem;
+
+          @media (min-width:1281px){
+            font-size: 24px;
+            }
         }
 
         p {
-          font-size: 1.6rem;
+          font-size: 1.4rem;
           font-weight: 500;
-          line-height: 2.6rem;
+          line-height: 2.4rem;
+
+          @media (min-width:1281px){
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+            }
         }
       }
     }

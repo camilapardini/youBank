@@ -1,30 +1,46 @@
 /* ------------- FORMULARIO SOLICITUD ------------- */
 
 #formularioSolicitud {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  width: 100%;
+  display: block;
+
+  @media (min-width:1281px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
 
   .fondo {
-    top: 90vw;
-    right: 70vw;
-    width: 940px;
-    height: 400px;
-    transform: rotate(-40deg);
-    z-index: -1;
-    bottom: 29vw;
-    opacity: 0.10;
-    background: $colorSecundario;
-    border-radius: 300px;
-    position: absolute;
+    display: none;
+
+    @media (min-width:1281px) {
+      top: 90vw;
+      right: 70vw;
+      width: 940px;
+      height: 400px;
+      transform: rotate(-40deg);
+      z-index: -1;
+      bottom: 29vw;
+      opacity: 0.10;
+      background: $colorSecundario;
+      border-radius: 300px;
+      position: absolute;
+    }
   }
 
   h1 {
-    margin: 4rem;
+    margin: 1rem;
     font-family: $fuenteSubtitulos;
-    font-size: 4rem;
+    font-size: 3rem;
     color: $colorTerciario;
+    text-align: center;
+
+    @media (min-width:1281px) {
+      margin: 4rem;
+      font-size: 4rem;
+    }
   }
 
   form {
@@ -36,19 +52,33 @@
     color: $colorTerciario;
 
     .nombreTitular {
-      font-size: 2rem;
+      font-size: 1.6rem;
+      text-align: center;
+      margin-top: 2rem;
+
+      @media (min-width:1281px) {
+        font-size: 2rem;
+      }
     }
 
     #nombreUsuario {
-      width: 80%;
-      padding: 10px;
+      width: 60%;
+      text-align: center;
       box-sizing: border-box;
       background-color: none;
+      margin-top:2rem;
       outline: none;
       resize: none;
       border: 0;
       transition: all .3s;
       border-bottom: 3px solid $colorTerciario;
+
+      @media (min-width:1281px) {
+        width: 80%;
+        padding: 10px;
+        text-align: left;
+        margin: 0;
+      }
 
       &:focus {
         border-bottom: 2px solid $colorSecundario;
@@ -59,9 +89,13 @@
       margin: 4rem;
 
       label {
-        font-size: 2rem;
+        font-size: 1.7rem;
         padding: 2rem;
         font-weight: 400;
+
+        @media (min-width:1281px) {
+          font-size: 2rem;
+        }
       }
 
 
@@ -72,15 +106,21 @@
       color: $colorTerciario;
       text-decoration: none;
       font-family: $fuenteSubtitulos;
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: 500;
-      margin-top: 4rem;
+      margin-top: 1rem;
       background-color: #aed29b;
       border-radius: 15px;
-      padding: 0.9rem;
+      padding: 0.7rem;
       border: none;
       box-shadow: 3px 5px 6px rgba(0, 0, 0, .5);
       z-index: 10;
+
+      @media (min-width:1281px) {
+        font-size: 2rem;
+        padding: 0.9rem;
+        margin-top: 4rem;
+      }
 
     }
 
@@ -88,8 +128,15 @@
 
   #error {
     font-family: $fuenteContenido;
-    margin-top: 5rem;
-    font-size: 2rem;
+    margin-top: 3rem;
+    margin-right: 0;
+    font-size: 1.5rem;
+    text-align: center;
+
+    @media (min-width:1281px) {
+      margin-top: 5rem;
+      font-size: 2rem;
+    }
   }
 
 }
@@ -147,6 +194,11 @@
   position: relative;
   cursor: pointer;
   border-bottom: 3px solid #263150bd;
+  
+
+  @media (min-width:1281px) {
+    font-size: 1.1rem;
+  }
 
   &::before {
     position: absolute;
@@ -181,12 +233,18 @@
 .sel__placeholder {
   display: block;
   font-family: $fuenteContenido;
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding: 0.2em 0.5em;
   text-align: left;
   pointer-events: none;
   user-select: none;
   visibility: visible;
+
+
+  @media (min-width:1281px) {
+    font-size: 2rem;
+  }
+
 
   &::before {
     position: absolute;
@@ -221,6 +279,8 @@
   padding: 0.5em 1em;
   user-select: none;
 
+
+
   &::after {
     content: '\f121';
     font-family: 'FontAwesome';
@@ -241,11 +301,13 @@
 }
 
 .sel--black-panther {
-  z-index: 3;
+  z-index: 13;
+
+
 }
 
 .sel--superman {
-  z-index: 2;
+  z-index: 12;
 }
 
 
@@ -256,11 +318,20 @@
   display: none;
   height: auto;
 
+
   .tituloTarjeta {
     font-family: $fuenteSubtitulos;
-    font-size: 4rem;
+    font-size: 3rem;
+    text-align: center;
     color: $colorTerciario;
     margin-bottom: 2rem;
+
+    @media (min-width:1281px) {
+      font-size: 4rem;
+    margin-bottom: 2rem;
+
+    }
+  
 
     .spanColors {
       background-image: linear-gradient(to left, violet, rgb(121, 55, 169), rgb(110, 184, 95), rgb(45, 45, 154), rgb(233, 233, 88), rgb(238, 194, 111), rgb(237, 105, 105));
@@ -273,12 +344,15 @@
     .spanGreen {
       color: rgb(67, 164, 67);
     }
+
     .spanGold {
       color: rgb(196, 167, 2);
     }
+
     .spanPlatinum {
       color: grey;
     }
+
     .spanBlack {
       color: rgb(0, 0, 0);
     }
@@ -286,10 +360,14 @@
 
   .marcaTarjeta {
     font-family: $fuenteSubtitulos;
-    font-size: 2.5rem;
+    font-size: 1.9rem;
     color: $colorTerciario;
     font-weight: 600;
     margin-bottom: 5rem;
+
+    @media (min-width:1281px) {
+      font-size: 2.5rem;
+    }
   }
 }
 
@@ -300,7 +378,7 @@
 }
 
 .cardColor {
-  width: 400px;
+  width: 320px;
   background-image: url(../img/youcolor.jpg);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5), -1px -1px 2px #aaa,
     1px 1px 2px #555;
@@ -309,10 +387,14 @@
   border-radius: 1rem;
   animation: 2s cubic-bezier(0.16, 1, 0.3, 1) cardEnter;
 
+  @media (min-width:1281px) {
+    width: 400px;
+  }
+
 }
 
 .cardVerde {
-  width: 400px;
+  width: 320px;
   background-image: url(../img/green-background.jpeg);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5), -1px -1px 2px #aaa,
     1px 1px 2px #555;
@@ -320,10 +402,14 @@
   padding: 1.5rem;
   border-radius: 1rem;
   animation: 2s cubic-bezier(0.16, 1, 0.3, 1) cardEnter;
+
+  @media (min-width:1281px) {
+    width: 400px;
+  }
 }
 
 .cardPlateada {
-  width: 400px;
+  width: 320px;
   background-image: url(../img/platinum-background.jpeg);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5), -1px -1px 2px #aaa,
     1px 1px 2px #555;
@@ -331,10 +417,14 @@
   padding: 1.5rem;
   border-radius: 1rem;
   animation: 1s cubic-bezier(0.16, 1, 0.3, 1) cardEnter;
+
+  @media (min-width:1281px) {
+    width: 400px;
+  }
 }
 
 .cardDorada {
-  width: 400px;
+  width: 320px;
   background-image: url(../img/gold-background.jpeg);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5), -1px -1px 2px #aaa,
     1px 1px 2px #555;
@@ -342,10 +432,14 @@
   padding: 1.5rem;
   border-radius: 1rem;
   animation: 1s cubic-bezier(0.16, 1, 0.3, 1) cardEnter;
+
+  @media (min-width:1281px) {
+    width: 400px;
+  }
 }
 
 .cardNegra {
-  width: 400px;
+  width: 320px;
   background-image: url(../img/black-background.jpg);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5), -1px -1px 2px #aaa,
     1px 1px 2px #555;
@@ -353,36 +447,60 @@
   padding: 1.5rem;
   border-radius: 1rem;
   animation: 1s cubic-bezier(0.16, 1, 0.3, 1) cardEnter;
+
+  @media (min-width:1281px) {
+    width: 400px;
+  }
 }
 
 .card__row {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 2rem;
+  padding-bottom: 0rem;
+
+  @media (min-width:1281px) {
+    padding-bottom: 2rem;
+  }
 }
 
 .card__title {
   font-weight: 600;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #19191a95;
   margin: 1rem 0 1.5rem;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.66);
+  
+  @media (min-width:1281px) {
+    font-size: 2.5rem;
+  }
 }
 
 .card__col {
   padding-right: 2rem;
+
+  @media (min-width:1281px) {
+    padding-right: 2rem;
+  }
 }
 
 .card__input {
   background: none;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #fff;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+
+  @media (min-width:1281px) {
+    font-size: 1.2rem;
+  }
 }
 
 .card__input--large {
-  font-size: 2rem;
+  font-size: 1.8rem;
+
+  @media (min-width:1281px) {
+    font-size: 2rem;
+  }
 }
 
 .card__input::placeholder {
@@ -407,12 +525,21 @@
 }
 
 .card__chip img {
-  width: 5rem;
+  width: 4rem;
+
+  @media (min-width:1281px) {
+    width: 5rem;
+  }
 }
 
 .card__brand img {
-  width: 5rem;
+  width: 4rem;
+  height: 4rem;
+
+  @media (min-width:1281px) {
+    width: 5rem;
   height: 5rem;
+  }
 }
 
 @keyframes cardEnter {
@@ -439,68 +566,88 @@
   align-items: center;
   margin-bottom: 5rem;
 
-  .tituloUsarla {
-    font-family: $fuenteSubtitulos;
-    color: $colorTerciario;
-    font-size: 3.2rem;
-  }
-
-  
-/*
-  .pUsarla{
-    font-family: $fuenteContenido;
-    font-size: 1.6rem;
-    color: $colorTerciario
-  }*/
 
   .contenedorCards {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
+    margin-top: 3rem;
+    width: 100%;
 
-    margin-top: 5rem;
-  
-  .cardBeneficios {
-    display: inline-block;
-    width: 190px;
-    text-align: center;
-    margin: 3rem;
-  }
-  
-  .imgCard {
-      height: 145px;
+    @media (min-width:1281px) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5rem;
+    }
+
+    .cardBeneficios {
+      display: inline-block;
+      width: 120px;
+      text-align: center;
+      margin: 3rem;
+
+
+    @media (min-width:1281px) {
       width: 190px;
+      text-align: center;
+      margin: 3rem;
+    }
+  }
+
+    .imgCard {
+      height: 140px;
+      width: 120px;
       overflow: hidden;
       border-radius: 0px 0px 20px 20px;
-      
-  }
-  
-  .imgCard img {
-      height: 120px;
-      
-  }
-  
-  
-  .contenedorTexto{
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
-    padding: 95px 10px 0px 10px;
-    border-radius: 20px;
-    background: #fff;
-    margin: -120px 0px 0px 0px;
-    line-height: 19px;
-    font-size: 14px;
-    height: 180px;
-   
-    
-  }
-  
-  .contenedorTexto h3 {
-    margin: 20px 0px 10px 0px;
-    color: $colorTerciario;
-    font-size: 16px;
-    font-family: $fuenteContenido;
-  }
 
-}
+      @media (min-width:1281px) {
+        height: 145px;
+        width: 190px;
+      }
+
+    }
+
+    .imgCard img {
+      height: 80px;
+
+      @media (min-width:1281px) {
+        height: 120px;
+      }
+
+    }
+
+
+    .contenedorTexto {
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+      padding: 55px 0px 0px 0px;
+      border-radius: 20px;
+      background: #fff;
+      margin: -120px 0px 0px 0px;
+      line-height: 19px;
+      font-size: 14px;
+      height: 135px;
+
+      @media (min-width:1281px) {
+        padding: 95px 10px 0px 10px;
+        font-size: 14px;
+        height: 180px;
+      }
+
+    }
+
+    .contenedorTexto h3 {
+      margin: 20px 0px 10px 0px;
+      color: $colorTerciario;
+      font-size: 14px;
+      font-family: $fuenteContenido;
+
+      @media (min-width:1281px) {
+        font-size: 16px;
+      }
+    }
+
+  }
 }
