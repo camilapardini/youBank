@@ -101,9 +101,6 @@ $(() => {
             </form>
           </div>
           
-          
-         
-          
           <div class="contenedorCards">
 <div class="cardBeneficios">
 <div class="imgCard">
@@ -155,20 +152,15 @@ $(() => {
 </div>
 
 </div>
-
-          
-     
       </div>
           
             `
-
               errorDisplayNone()
               ordenarContenido();
               desplegarFormContacto();
 
-
-            }
-          });
+}
+});
 
         } else if (edad === "Entre 20 y 30 años" && sueldo === "Menos de 30000") {
 
@@ -218,9 +210,7 @@ $(() => {
               </div>
               
               
-             
-              
-              <div class="contenedorCards">
+     <div class="contenedorCards">
     <div class="cardBeneficios">
     <div class="imgCard">
       <div class="imgInterna">
@@ -274,7 +264,6 @@ $(() => {
           </div>
           
             `
-
               errorDisplayNone()
               ordenarContenido();
               desplegarFormContacto();
@@ -426,9 +415,6 @@ $(() => {
                 </form>
               </div>
               
-              
-             
-              
               <div class="contenedorCards">
     <div class="cardBeneficios">
     <div class="imgCard">
@@ -530,10 +516,7 @@ $(() => {
                   </div>
                 </form>
               </div>
-              
-              
-             
-              
+
               <div class="contenedorCards">
     <div class="cardBeneficios">
     <div class="imgCard">
@@ -586,7 +569,6 @@ $(() => {
     
     </div> 
           </div>
-
 
             `
               errorDisplayNone()
@@ -722,5 +704,4 @@ $(() => {
     })
 
   })
-
 })

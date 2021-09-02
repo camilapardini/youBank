@@ -1,201 +1,201 @@
  /*----------- FORMULARIO CONTACTANOS ----------*/
 
  #formContactanos {
-    display: none;
+   display: none;
 
-    .recibilaEnCasa{
-      font-family: $fuenteSubtitulos;
-      font-size: 3rem;
-      color: $colorTerciario;
+   .recibilaEnCasa {
+     font-family: $fuenteSubtitulos;
+     font-size: 3rem;
+     color: $colorTerciario;
 
-      @media (min-width:1281px) {
-        font-size: 4rem;
-      }
-    }
-  }
+     @media (min-width:1281px) {
+       font-size: 4rem;
+     }
+   }
+ }
 
-  #form-contacto{
-  width: 85%;
-  max-width: 680px;
-  margin: 2rem auto 3rem;
+ #form-contacto {
+   width: 85%;
+   max-width: 680px;
+   margin: 2rem auto 3rem;
 
-  @media (min-width:1281px) {
-    width: 100%;
-    margin: 5rem auto 4rem;
-    max-width: 680px;
-  }
-  
-  .conjuntoCampos {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+   @media (min-width:1281px) {
+     width: 100%;
+     margin: 5rem auto 4rem;
+     max-width: 680px;
+   }
 
-    .inputgroup {
-      position: relative;
-      flex: 3 0 220px;
-      margin: 2rem 1rem .8rem;
-     
-      label {
-        position: absolute;
-        top: 1.2rem;
-        left: 0.8rem;
-        font-family: $fuenteContenido;
-        font-weight: 500;
-        color: $colorTerciario;
-        font-size: 1.5rem;
-        letter-spacing: 0.1em;
-        line-height: 1;
-        -webkit-transition: all 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-        transition: all 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
-      
-      }
-      input,
-      textarea {
-        box-sizing: border-box;
-        height: 65px;
-        width: 100%;
-        border: 0;
-        border-bottom: 3px solid $colorTerciario;
-        border-radius: 3px;
-        outline: none;
-        padding: .4rem 0 0 1.2rem;
-        color: #0f1010;
-        font-family: $fuenteContenido;
-        font-size: 1.5rem;
-        -webkit-transition: all 300ms ease;
-        transition: all 300ms ease;
+   .conjuntoCampos {
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: space-between;
 
-        @media (min-width:1281px) {
-          font-size: 2rem;
-          
-        }
-      }
-  
-    }
-    .inputgroup.active {
-      label {
-        color: $colorPrincipal;
-        font-size: 1.3rem;
-        left: 0.4rem;
-        top: 0.36rem;
+     .inputgroup {
+       position: relative;
+       flex: 3 0 220px;
+       margin: 2rem 1rem .8rem;
 
-        
-      }
-      input,
-      textarea {
-        background-color: #fff;
-        border-bottom: 4px solid $colorSecundario;
-      }
-    }
-    
-  }
+       label {
+         position: absolute;
+         top: 1.2rem;
+         left: 0.8rem;
+         font-family: $fuenteContenido;
+         font-weight: 500;
+         color: $colorTerciario;
+         font-size: 1.5rem;
+         letter-spacing: 0.1em;
+         line-height: 1;
+         -webkit-transition: all 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+         transition: all 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
 
-  .contact-form__button{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+       }
 
-    .botonEnviar{
-      box-sizing: border-box;
-      min-width: 100px;
-      -webkit-transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
-      transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
-      width: 15%;
-      color: $colorTerciario;
-      text-decoration: none;
-      font-family: $fuenteSubtitulos;
-      font-size: 2rem;
-      font-weight: 500;
-      margin-top: 4rem;
-      background-color: #aed29b;
-      border-radius: 15px;
-      padding: 0.5rem;
-      border: none;
-      box-shadow: 3px 5px 6px rgba(0, 0, 0, .5);
+       input,
+       textarea {
+         box-sizing: border-box;
+         height: 65px;
+         width: 100%;
+         border: 0;
+         border-bottom: 3px solid $colorTerciario;
+         border-radius: 3px;
+         outline: none;
+         padding: .4rem 0 0 1.2rem;
+         color: #0f1010;
+         font-family: $fuenteContenido;
+         font-size: 1.5rem;
+         -webkit-transition: all 300ms ease;
+         transition: all 300ms ease;
 
-      
-      @media (min-width:1281px) {
-        font-size: 2rem;
-        padding: 0.9rem;
-        width: 20%;
-        min-width: 140px;
-      }
-    }
-    
-  }
-}
+         @media (min-width:1281px) {
+           font-size: 2rem;
+
+         }
+       }
+
+     }
+
+     .inputgroup.active {
+       label {
+         color: $colorPrincipal;
+         font-size: 1.3rem;
+         left: 0.4rem;
+         top: 0.36rem;
 
 
-.container-all{
-    display: none;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 30;
-    
-}
+       }
 
-    .popUpConfirmacion{
-        display: none;
-        position: fixed;
-        font-family: $fuenteContenido;
-        border: 5px solid $colorSecundario;
-        border-radius: 25px;
-        width: 60%;
-        height: 50%;
-        padding: 3rem;
-        background-color: white;
-        z-index: 20;
-        box-shadow: 3px 5px 6px rgba(0, 0, 0, 0.523);
-        top: 40%;
-        right: 20%;
+       input,
+       textarea {
+         background-color: #fff;
+         border-bottom: 4px solid $colorSecundario;
+       }
+     }
 
-          
-      @media (min-width:1281px) {
-        width: 20%;
-        height: 35%;
-        padding: 3rem;
-        right: 40%;
-      }
+   }
 
-      h2{
-        font-size: 20px;
+   .contact-form__button {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
 
-        @media (min-width:1281px) {
-          font-size: 30px;
-        }
-      }
-
-      h3{
-        font-size: 14px ;
-
-        @media (min-width:1281px) {
-          font-size: 24px ;
-        }
-      }
-        .botonAceptar {
-            color: $colorTerciario;
-            text-decoration: none;
-            font-family: $fuenteSubtitulos;
-            font-weight: 500;
-            font-size: 1.6rem;
-            margin-top: .3rem;
-            background-color: #aed29b;
-            border-radius: 15px;
-            padding: 0.9rem;
-            box-shadow: 3px 2px 3px rgba(0, 0, 0, .5);
-
-            @media (min-width:1281px) {
-              margin-top: 3rem;
-            }
-           
-          }
-    }
+     .botonEnviar {
+       box-sizing: border-box;
+       min-width: 100px;
+       -webkit-transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+       transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+       width: 15%;
+       color: $colorTerciario;
+       text-decoration: none;
+       font-family: $fuenteSubtitulos;
+       font-size: 2rem;
+       font-weight: 500;
+       margin-top: 4rem;
+       background-color: #aed29b;
+       border-radius: 15px;
+       padding: 0.5rem;
+       border: none;
+       box-shadow: 3px 5px 6px rgba(0, 0, 0, .5);
 
 
+       @media (min-width:1281px) {
+         font-size: 2rem;
+         padding: 0.9rem;
+         width: 20%;
+         min-width: 140px;
+       }
+     }
 
- 
+   }
+ }
+
+
+ .container-all {
+   display: none;
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   right: 0;
+   background-color: rgba(0, 0, 0, 0.6);
+   z-index: 30;
+
+ }
+
+ .popUpConfirmacion {
+   display: none;
+   position: fixed;
+   font-family: $fuenteContenido;
+   border: 5px solid $colorSecundario;
+   border-radius: 25px;
+   width: 60%;
+   height: 50%;
+   padding: 3rem;
+   background-color: white;
+   z-index: 20;
+   box-shadow: 3px 5px 6px rgba(0, 0, 0, 0.523);
+   top: 40%;
+   right: 20%;
+
+
+   @media (min-width:1281px) {
+     width: 20%;
+     height: 35%;
+     padding: 3rem;
+     right: 40%;
+   }
+
+   h2 {
+     font-size: 20px;
+
+     @media (min-width:1281px) {
+       font-size: 30px;
+     }
+   }
+
+   h3 {
+     font-size: 14px;
+
+     @media (min-width:1281px) {
+       font-size: 24px;
+     }
+   }
+
+   .botonAceptar {
+     color: $colorTerciario;
+     text-decoration: none;
+     font-family: $fuenteSubtitulos;
+     font-weight: 500;
+     font-size: 1.6rem;
+     margin-top: .3rem;
+     background-color: #aed29b;
+     border-radius: 15px;
+     padding: 0.9rem;
+     box-shadow: 3px 2px 3px rgba(0, 0, 0, .5);
+
+     @media (min-width:1281px) {
+       margin-top: 3rem;
+     }
+
+   }
+ }

@@ -66,7 +66,7 @@
       text-align: center;
       box-sizing: border-box;
       background-color: none;
-      margin-top:2rem;
+      margin-top: 2rem;
       outline: none;
       resize: none;
       border: 0;
@@ -88,6 +88,11 @@
     .preguntasForm {
       margin: 4rem;
 
+      @media (min-width: 600px) {
+        display: block;
+        text-align: center;
+      }
+
       label {
         font-size: 1.7rem;
         padding: 2rem;
@@ -95,11 +100,9 @@
 
         @media (min-width:1281px) {
           font-size: 2rem;
+          display: inline-block;
         }
       }
-
-
-
     }
 
     .botonSolicitar {
@@ -121,9 +124,7 @@
         padding: 0.9rem;
         margin-top: 4rem;
       }
-
     }
-
   }
 
   #error {
@@ -154,7 +155,6 @@
     opacity: 1;
   }
 }
-
 
 @keyframes fadeInUp {
   from {
@@ -194,7 +194,6 @@
   position: relative;
   cursor: pointer;
   border-bottom: 3px solid #263150bd;
-  
 
   @media (min-width:1281px) {
     font-size: 1.1rem;
@@ -279,8 +278,6 @@
   padding: 0.5em 1em;
   user-select: none;
 
-
-
   &::after {
     content: '\f121';
     font-family: 'FontAwesome';
@@ -302,8 +299,6 @@
 
 .sel--black-panther {
   z-index: 13;
-
-
 }
 
 .sel--superman {
@@ -328,10 +323,9 @@
 
     @media (min-width:1281px) {
       font-size: 4rem;
-    margin-bottom: 2rem;
+      margin-bottom: 2rem;
 
     }
-  
 
     .spanColors {
       background-image: linear-gradient(to left, violet, rgb(121, 55, 169), rgb(110, 184, 95), rgb(45, 45, 154), rgb(233, 233, 88), rgb(238, 194, 111), rgb(237, 105, 105));
@@ -469,7 +463,7 @@
   color: #19191a95;
   margin: 1rem 0 1.5rem;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.66);
-  
+
   @media (min-width:1281px) {
     font-size: 2.5rem;
   }
@@ -538,7 +532,7 @@
 
   @media (min-width:1281px) {
     width: 5rem;
-  height: 5rem;
+    height: 5rem;
   }
 }
 
@@ -553,9 +547,6 @@
     opacity: 1;
   }
 }
-
-
-
 
 
 .caracteristicasTarjeta {
@@ -590,12 +581,12 @@
       margin: 3rem;
 
 
-    @media (min-width:1281px) {
-      width: 190px;
-      text-align: center;
-      margin: 3rem;
+      @media (min-width:1281px) {
+        width: 190px;
+        text-align: center;
+        margin: 3rem;
+      }
     }
-  }
 
     .imgCard {
       height: 140px;
@@ -618,7 +609,6 @@
       }
 
     }
-
 
     .contenedorTexto {
       box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
@@ -648,6 +638,5 @@
         font-size: 16px;
       }
     }
-
   }
 }

@@ -10,7 +10,6 @@ $(() => {
       }
     }
   
-  
     class Tarjeta {
   
       constructor(caracteristicas) {

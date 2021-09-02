@@ -5,10 +5,6 @@
 @import "variables";
 
 
-
-
-
-
 * {
   margin: 0;
   padding: 0;
@@ -34,8 +30,18 @@ body {
     background-repeat: no-repeat;
     background-position: bottom;
 
-    @media (min-width:320px){
 
+    @media (min-width: 600px) {
+      height: 40vh;
+      width: 100vw;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      background-image: url(../img/7849.jpg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right;
+      margin-left: 2rem;
     }
 
     @media (min-width:1281px) {
@@ -48,13 +54,14 @@ body {
       display: flex;
       align-items: flex-start;
       justify-content: left;
+      margin-left: 0;
     }
 
 
-    .fondo{
+    .fondo {
       display: none;
 
-      @media (min-width:1281px){
+      @media (min-width:1281px) {
         top: -7vw;
         right: 50vw;
         width: 1400px;
@@ -68,7 +75,7 @@ body {
         position: absolute;
       }
     }
-   
+
     .tituloPrincipal {
       display: flex;
       flex-direction: column;
@@ -76,18 +83,14 @@ body {
       align-items: center;
       z-index: 1;
 
-      @media (min-width:320px){
-
-      }
-  
-      @media (min-width:1281px){
+      @media (min-width:1281px) {
         width: 55%;
-      height: 70%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 1;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
       }
 
       h1 {
@@ -96,7 +99,7 @@ body {
         font-size: 5.5rem;
         font-weight: 900;
 
-        @media (min-width:1281px){
+        @media (min-width:1281px) {
           font-family: $fuenteTitulos;
           color: $colorTerciario;
           font-size: 8rem;
@@ -109,7 +112,7 @@ body {
         color: $colorSecundario;
         font-size: 20px;
 
-        @media (min-width:1281px){
+        @media (min-width:1281px) {
           font-size: 30px;
         }
       }
@@ -125,7 +128,7 @@ body {
         border-radius: 15px;
         padding: 0.5rem;
         box-shadow: 3px 5px 6px rgba(0, 0, 0, .5);
-       
+
         @media (min-width:1281px) {
           font-size: 2.2rem;
           padding: 0.9rem;
@@ -142,12 +145,12 @@ body {
     margin: 0;
     color: $colorTerciario;
 
-    @media (min-width:1281px){
+    @media (min-width:1281px) {
       margin: 6rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
     }
 
     .presentacion {
@@ -162,10 +165,10 @@ body {
         font-size: 3.2rem;
         margin: 2rem;
 
-        @media (min-width:1281px){
+        @media (min-width:1281px) {
           font-size: 4rem;
         }
-    
+
       }
 
       p {
@@ -174,7 +177,12 @@ body {
         font-family: $fuenteContenido;
         font-size: 1.6rem;
 
-        @media (min-width:1281px){
+        @media (min-width: 600px) {
+          width: 65%;
+        }
+
+
+        @media (min-width:1281px) {
           width: 40%;
           font-size: 2rem;
         }
@@ -185,7 +193,14 @@ body {
       display: block;
       width: 90%;
 
-      @media (min-width:1281px){
+      @media (min-width: 600px) {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+      }
+
+      @media (min-width:1281px) {
         display: flex;
         justify-content: center;
         width: 80%;
@@ -203,30 +218,35 @@ body {
         margin: 2rem;
         text-align: center;
 
-        @media (min-width:1281px){
-        width: 40%;
-        padding: 2rem;
-        margin: 4rem;
-        text-align: center;
+        @media (min-width: 600px) {
+          width: 55%;
+          text-align: center;
+        }
+
+        @media (min-width:1281px) {
+          width: 40%;
+          padding: 2rem;
+          margin: 4rem;
+          text-align: center;
         }
 
         .imgBeneficios {
           height: 80px;
           width: 80px;
 
-          @media (min-width:1281px){
+          @media (min-width:1281px) {
             height: 120px;
             width: 120px;
-            }
+          }
         }
 
         h3 {
           color: $colorSecundario;
           font-size: 2rem;
 
-          @media (min-width:1281px){
+          @media (min-width:1281px) {
             font-size: 24px;
-            }
+          }
         }
 
         p {
@@ -234,10 +254,11 @@ body {
           font-weight: 500;
           line-height: 2.4rem;
 
-          @media (min-width:1281px){
+
+          @media (min-width:1281px) {
             font-size: 1.6rem;
             line-height: 2.6rem;
-            }
+          }
         }
       }
     }

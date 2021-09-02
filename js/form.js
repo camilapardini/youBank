@@ -28,8 +28,6 @@ $(() => {
   })
 
   
-
-
   /*---- Agrego estilos y funciones al formulario de solicitud de tarjeta ----*/
 
   $('.sel').each(function () {
@@ -87,8 +85,6 @@ $(() => {
   });
 
 
-
-
   /*---- Agrego estilos y funciones al formulario de contacto y datos personales----*/
 
 
@@ -128,7 +124,4 @@ $(() => {
       console.log(localStorage.getItem("formData"))
     
     });
-
-
-
 })

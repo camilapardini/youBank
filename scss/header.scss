@@ -1,20 +1,14 @@
 
-$colorPrincipal: #4b77c4;
-$colorSecundario: #de8843;
-$colorTerciario: #263150;
-$fuenteTitulos: 'Maitree', serif;
-$fuenteSubtitulos: 'Mada', sans-serif;
-$fuenteContenido: 'Kanit', sans-serif;
 
 header {
-    
+
     height: 12vh;
     width: 100%;
     font-family: 'Mada', sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
 
     .logo {
         width: auto;
@@ -173,8 +167,9 @@ header {
     transition-property: color;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-  }
-  .hvr-shutter-out-vertical:before {
+}
+
+.hvr-shutter-out-vertical:before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -194,21 +189,27 @@ header {
     transition-duration: 0.3s;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
-  }
-  .hvr-shutter-out-vertical:hover, .hvr-shutter-out-vertical:focus, .hvr-shutter-out-vertical:active {
+}
+
+.hvr-shutter-out-vertical:hover,
+.hvr-shutter-out-vertical:focus,
+.hvr-shutter-out-vertical:active {
     color: white;
-  }
-  .hvr-shutter-out-vertical:hover:before, .hvr-shutter-out-vertical:focus:before, .hvr-shutter-out-vertical:active:before {
+}
+
+.hvr-shutter-out-vertical:hover:before,
+.hvr-shutter-out-vertical:focus:before,
+.hvr-shutter-out-vertical:active:before {
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
-  }
+}
 
-  
+
 
 
 /*--- RESPONSIVE MEDIA QUERY ----*/
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 800px) {
     header {
         height: 5vh;
 
@@ -248,12 +249,12 @@ header {
                 @media (min-width:1281px) {
                     margin: 20px;
                     font-size: 1.8em;
-  }
+                }
             }
         }
 
         nav {
-            
+
 
             label {
                 display: block;

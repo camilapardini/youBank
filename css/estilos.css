@@ -139,7 +139,7 @@ header {
   transform: scaleY(1); }
 
 /*--- RESPONSIVE MEDIA QUERY ----*/
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 800px) {
   header {
     height: 5vh; }
     header .logo {
@@ -182,7 +182,8 @@ header {
   padding: 45px 0 20px;
   font-size: 15px;
   line-height: 24px;
-  color: #a7a3a3; }
+  color: #a7a3a3;
+  height: auto; }
   .site-footer hr {
     border-top-color: #bbb;
     opacity: 0.5; }
@@ -507,13 +508,18 @@ header {
         border-bottom: 2px solid #de8843; }
     #formularioSolicitud form .preguntasForm {
       margin: 4rem; }
+      @media (min-width: 600px) {
+        #formularioSolicitud form .preguntasForm {
+          display: block;
+          text-align: center; } }
       #formularioSolicitud form .preguntasForm label {
         font-size: 1.7rem;
         padding: 2rem;
         font-weight: 400; }
         @media (min-width: 1281px) {
           #formularioSolicitud form .preguntasForm label {
-            font-size: 2rem; } }
+            font-size: 2rem;
+            display: inline-block; } }
     #formularioSolicitud form .botonSolicitar {
       color: #263150;
       text-decoration: none;
@@ -935,6 +941,18 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom; }
+    @media (min-width: 600px) {
+      body .inicio {
+        height: 40vh;
+        width: 100vw;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        background-image: url(../img/7849.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        margin-left: 2rem; } }
     @media (min-width: 1281px) {
       body .inicio {
         height: 80vh;
@@ -945,7 +963,8 @@ body {
         background-position: right;
         display: flex;
         align-items: flex-start;
-        justify-content: left; } }
+        justify-content: left;
+        margin-left: 0; } }
     body .inicio .fondo {
       display: none; }
       @media (min-width: 1281px) {
@@ -1036,6 +1055,9 @@ body {
         text-align: center;
         font-family: "Kanit", sans-serif;
         font-size: 1.6rem; }
+        @media (min-width: 600px) {
+          body #quienesSomos .presentacion p {
+            width: 65%; } }
         @media (min-width: 1281px) {
           body #quienesSomos .presentacion p {
             width: 40%;
@@ -1043,6 +1065,12 @@ body {
     body #quienesSomos .beneficios {
       display: block;
       width: 90%; }
+      @media (min-width: 600px) {
+        body #quienesSomos .beneficios {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          align-items: center; } }
       @media (min-width: 1281px) {
         body #quienesSomos .beneficios {
           display: flex;
@@ -1059,6 +1087,10 @@ body {
         padding: 1rem;
         margin: 2rem;
         text-align: center; }
+        @media (min-width: 600px) {
+          body #quienesSomos .beneficios-card {
+            width: 55%;
+            text-align: center; } }
         @media (min-width: 1281px) {
           body #quienesSomos .beneficios-card {
             width: 40%;
